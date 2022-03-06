@@ -57,69 +57,28 @@ function Login() {
     // }
 
     return (
-        <div className='registerTab'>
-            <button className='navigate' onClick={() => navigate("/student-register")}>Sign up as student</button>
-         <div className='body'>  
-         {Object.keys(formErrors).length === 0 && isSubmit ? (<div className='signupchk'> Signup Successful</div>):(<pre className='pretext'>{JSON.stringify(formValues,undefined,2)}</pre>)}
-             <div className="main">
+        // <div className='registerTab'>
+        // <button className='navigate' onClick={() => navigate("/student-register")}>Sign up as student</button> </div> 
+     <div className='body'>   
+         {/* {Object.keys(formErrors).length === 0 && isSubmit ? (<div className='signupchk'> Signup Successful</div>):(<pre className='pretext'>{JSON.stringify(formValues,undefined,2)}</pre>)} */}
+        <div className="main">
     {/* <pre className='pretext'>{JSON.stringify(formValues,undefined,2)}</pre>  	 */}
-		    <input type="checkbox" className="chk" aria-hidden="true"/>
+		    {/* <input type="checkbox" className="chk" aria-hidden="true"/> */}
 
-			    <div className="signup">
-                  <form onSubmit={handleSubmit}>
-                       <label for="chk" aria-hidden="true">Login</label>
-                      <input type="text" name="username" placeholder="User name" required="" value={formValues.username} onChange={handleChange}/>
-                       <p className='error' >{formErrors.username}</p>
-                       
-                        <input type="password" name="password" placeholder="Password" required="" value={formValues.password} onChange={handleChange} />
-                   <p className='error'>{formErrors.password}</p>
-                     <button>Login</button>
-                   </form>
-			    </div>
-
-			  
-	        </div>
-         </div>
-         </div>
-/* <div className="container">
-    <div className="form-box">
-        <div className="header-form">
-            <h4 className="text-primary text-center">< FaUserCircle style={{fontSize:"110px"}}/></h4>
-            <div className="image">
-            </div>
-        </div>
-        <div className="body-form">
-            <form  onSubmit={handleSubmit}>
-                <div className="input-group mb-3"> 
-                    <div className="input-group-prepend"> 
-                        <span className="input-group-text"> <FaUser/> </span> 
-                    </div> 
-                    <input type="text" name="username"  className="form-control" placeholder="Username" required="" value={formValues.username} onChange={handleChange}/>
+		  <div className="signup">
+            <form onSubmit={handleSubmit}>
+                    <label for="chk" aria-hidden="true">Login</label>
+                    <input type="text" name="username" placeholder="User name" required="" value={formValues.username} onChange={handleChange}/>
                     <p className='error' >{formErrors.username}</p>
-                </div> 
-
-            <div className="input-group mb-3">
-                <div className="input-group-prepend">
-                    <span className="input-group-text" > <FaLock/> </span>
-                </div>
-                    <input type="text" name="password"  className="form-control" placeholder="Password" required="" value={formValues.password} onChange={handleChange} />
+                    <input type="password" name="password" placeholder="Password" required="" value={formValues.password} onChange={handleChange} />
                     <p className='error'>{formErrors.password}</p>
-                </div>
-
-                <button type="button"  className="btn btn-secondary btn-block">LOGIN</button>
-                <div className="message">
-                <div><input type="checkbox" /> Remember ME</div>
-                <div><button className='navigate' onClick={() => navigate("/student-register")}> Sign UP</button></div>
-                </div>
+                    <button>Login</button>
             </form>
-        <div className="social">
-         <a href="#"><FaLinkedin/> </a>
-         <a href="#"><FaGoogle/></a>
-         <a href="#"><FaFacebookSquare/></a>
-        </div>
-    </div>
-    </div>
-</div> */
+		  </div>
+        </div>	  
+	 </div>
+   
+       
     );
 }
 
