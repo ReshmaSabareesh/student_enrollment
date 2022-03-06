@@ -115,7 +115,7 @@ function Studentregistration(props) {
                             <p className='error'>{formErrors.skillSet}</p>
                             <label>Employment status
                                 <select name='employmentStatus' value={formValues.employmentStatus} onChange={handleChange}>
-                                    <option value="student">Student</option>
+                                    <option value="0">Select any one option</option>
                                     <option value="Employee">Employee</option>
                                     <option value="Self employed">Self employed</option>
                                 </select></label>
@@ -135,6 +135,8 @@ function Studentregistration(props) {
                                 <input type="text" name="fee" placeholder="Course FEE" required="" value={formValues.fee} onChange={handleChange} />
                             <p className='error'>{formErrors.password}</p>
                             <input type="file" name='photo' value={formValues.file} onChange={handleChange} />
+                            <br></br>
+
                             <button onClick={fetchForm} >Sign up</button>
                         </form>
                     </div>

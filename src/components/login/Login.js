@@ -74,6 +74,7 @@ function Login() {
                     <p className='error'>{formErrors.password}</p>
                     <button>Login</button>
             </form>
+            <button className='navigate' onClick={() => navigate("/student-register")}>Sign up as student</button>
 		  </div>
         </div>	  
 	 </div>
